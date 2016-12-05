@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Drive Google Drive İndime / Download Linki Oluşturma</title>
+<style type='text/css'>
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background:#f7f7f7 url(https://cdn.rawgit.com/jquerycods/google-drive-download-links/master/noise.png) repeat scroll top center;}
+#page_content{text-align:center}
+#container {display: none;}
+.button{overflow:hidden;vertical-align:middle;display:inline-block;padding:0.25em 0.8125em 0.1875em;border:0;border-bottom:0.15em solid #d65e00;border-right:0.1em solid #d65e00;border-radius:0.2rem;outline:0;background-color:#ee6900;color:#fff;font-size:1em;text-align:center;text-overflow:ellipsis;-webkit-transition:background 450ms cubic-bezier(0.23,1,0.32,1),opacity 0.4s ease;transition:background 450ms cubic-bezier(0.23,1,0.32,1),opacity 0.4s ease;white-space:nowrap;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+</style>
+</head>
+<body>
+<div id="page_content">
+<div class="container">
+<div class="row">
+<form>
+<div class="form-group">
+<input type="text" class="form-control" id="driveID" placeholder="Google Drive ID'nizi Buraya Ekleyin" />
+</div>
+</form>
+<div class="get">
+<button class="btn btn-primary" id="get-button" type="submit" onclick='getLink()'>Link Oluştur</button>
+</div>
+<div id="container">
+<h3><b>Sonuç:</b></h3>
+<div id="link_container" data-toggle="tooltip" data-placement="top" title="CTRL + C ile kopyala"></div>
+<button type="button" class="btn btn-danger get-another" onClick="window.location.href=window.location.href">Yeni Link Oluşturma</button>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="https://cdn.rawgit.com/jquerycods/google-drive-download-links/master/drv2.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/jquerycods/google-drive-download-links/master/drv.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/jquerycods/download/master/download.js"></script>
+</body>
+</html>
