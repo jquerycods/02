@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Drive Google Drive İndime / Download Linki Oluşturma</title>
+<style type='text/css'>
+html, button, input, select, textarea {font: 16px/1.5 'Open Sans', Helvetica, sans-serif;}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background:#f7f7f7 url(https://cdn.rawgit.com/jquerycods/google-drive-download-links/master/noise.png) repeat scroll top center;}
+#page_content{text-align:center}
+#container {display: none;}
+.form-control{background-color: #fff;background-image: none;border-radius: 0.2rem;padding: 0.25em;border:2px solid #ccc;}
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {border-top-right-radius: 0;border-bottom-right-radius: 0;background-color: #fff;border: 2px solid #ccc;border-right: 0;}
+#driveID{width: 100%;}.get-another {margin-top: 20px;}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {border-top-right-radius: 0;border-bottom-right-radius: 0;background-color: #349edb;border: 2px solid #2e8ec5;}
+input:focus,input:hover,input:active{box-shadow:none!important;}
+.btn{overflow:hidden;vertical-align:middle;display:inline-block;padding:0.25em 0.8125em 0.1875em;border:0;border:2px solid #d65e00;border-radius:0.2rem;outline:0;background-color:#ee6900;color:#fff;font-size:1em;text-align:center;text-overflow:ellipsis;-webkit-transition:background 450ms cubic-bezier(0.23,1,0.32,1),opacity 0.4s ease;transition:background 450ms cubic-bezier(0.23,1,0.32,1),opacity 0.4s ease;white-space:nowrap;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.btn-default{color:#999!important;background-color:#fff!important;border:2px solid #ccc!important;}
+.btn:hover, .btn:focus {background-color: #d65e00;border-color: #ca5900;text-decoration: none;}
+textarea:focus,select:focus{box-shadow:0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(191,191,191,0.6)}
+fieldset{border:none}
+form label{clear:left;float:left;width:45%;margin-bottom:0.75em}
+textarea:focus,select:focus{box-shadow:0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(191,191,191,0.6)}
+select{border-radius:0.4em;border:1px solid #e0e0e0}
+form input[type="radio"]{position:relative;right:0.3em;margin-bottom:0.75em}
+textarea{border-radius:0.4em;border:1px solid #e0e0e0;min-height:1.75em;padding:0.25em;position:relative;z-index:1}
+input {-webkit-appearance: none;}
+textarea{height:auto}
+select{font-family:inherit;background-color:#fff;margin-bottom:0.8em}
+input[type="text"]{font-family:inherit;display:block;margin:0 0 0.8em}
+*,*:before,*:after{box-sizing:border-box}
+a,btn{-ms-touch-action:manipulation;touch-action:manipulation}
+input,textarea,select,button{font-family:Dosis,Helvetica,Arial,sans-serif;font-size:1em}
+.form-control:focus{border-color:#ccc;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}
+</style>
+</head>
+<body>
+<div id="page_content">
+<div class="container">
+<div class="row">
+<form>
+<div class="form-group">
+<input type="text" class="form-control" id="driveID" placeholder="Google Drive ID'nizi Buraya Ekleyin" />
+</div>
+</form>
+<div class="get">
+<button class="btn btn-primary" id="get-button" type="submit" onclick='getLink()'>Link Oluştur</button>
+</div>
+<div id="container">
+<h3><b>Sonuç:</b></h3>
+<div id="link_container" data-toggle="tooltip" data-placement="top" title="CTRL + C ile kopyala"></div>
+<button type="button" class="btn btn-danger get-another" onClick="window.location.href=window.location.href">Yeni Link Oluşturma</button>
+</div>
+</div>
+</div>
+<div class="footer">
+<a href='http://bloggereklentileri.blogspot.com.tr/p/google-drive-indime-download-linki.html' id='mycredit'></a>
+</div></div>
+<script type="text/javascript" src="https://cdn.rawgit.com/jquerycods/google-drive-download-links/master/drv2.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/jquerycods/google-drive-download-links/master/drv.js"></script>
+<div id="6kLW3Nzq" title="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">
+<a href="javascript:decryptText('6kLW3Nzq')">Show encrypted text</a>
+</div>
+</body>
+</html>
